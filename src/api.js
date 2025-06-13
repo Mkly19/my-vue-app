@@ -28,7 +28,7 @@ export function getRooms (floor) {
 }
 
 // Récupère l'occupation réelle d'une pièce selon le modèle fourni
-export async function fetchOccupation(dynamicId) {
+export async function fetchOccupation (dynamicId) {
   try {
     const res = await axios.get(`https://api-developers.spinalcom.com/api/v1/room/${dynamicId}/control_endpoint_list`)
     // Ici, la réponse est un tableau d'objets avec une clé "endpoints"

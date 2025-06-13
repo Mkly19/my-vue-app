@@ -156,9 +156,9 @@ export default {
       const total = rooms.length
       const occupied = rooms.filter(r => r.occupation === 'occupied').length
       const free = rooms.filter(r => r.occupation === 'free').length
-      const undefined = rooms.filter(r => r.occupation === 'undefined').length
+      const undefinedc = rooms.filter(r => r.occupation === 'undefined').length
       const percent = total ? Math.round((occupied / total) * 100) : 0
-      return { occupied, free, undefined, percent }
+      return { occupied, free, undefinedc, percent }
     },
     toggleFloor (id) {
       this.floors = this.floors.map(floor =>
@@ -195,7 +195,6 @@ export default {
 
 <style scoped>
 
-/* Responsive : sur mobile, le logo et le titre passent l'un au-dessus de l'autre */
   header {
     display: flex;
     flex-direction: row;
@@ -209,7 +208,6 @@ export default {
 }
   .logo {
     height: 48px;
-    
   }
   h1 {
     color: #010911;
